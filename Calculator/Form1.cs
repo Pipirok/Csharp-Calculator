@@ -265,6 +265,16 @@ namespace Calculator
         {
             NumberOperation(0);
         }
+
+        private void Calculator_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

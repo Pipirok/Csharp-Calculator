@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.labelOperationalNum = new System.Windows.Forms.Label();
             this.TextDisplay = new System.Windows.Forms.TextBox();
             this.ButtonDivide = new System.Windows.Forms.Button();
             this.ButtonPower = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@
             this.ButtonNum3 = new System.Windows.Forms.Button();
             this.ButtonNum2 = new System.Windows.Forms.Button();
             this.ButtonNum1 = new System.Windows.Forms.Button();
-            this.labelOperationalNum = new System.Windows.Forms.Label();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +82,17 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(454, 517);
             this.MainPanel.TabIndex = 0;
+            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
+            // 
+            // labelOperationalNum
+            // 
+            this.labelOperationalNum.AutoSize = true;
+            this.labelOperationalNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelOperationalNum.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.labelOperationalNum.Location = new System.Drawing.Point(375, 165);
+            this.labelOperationalNum.Name = "labelOperationalNum";
+            this.labelOperationalNum.Size = new System.Drawing.Size(0, 16);
+            this.labelOperationalNum.TabIndex = 21;
             // 
             // TextDisplay
             // 
@@ -360,16 +371,6 @@
             this.ButtonNum1.UseVisualStyleBackColor = false;
             this.ButtonNum1.Click += new System.EventHandler(this.ButtonNum1_Click);
             // 
-            // labelOperationalNum
-            // 
-            this.labelOperationalNum.AutoSize = true;
-            this.labelOperationalNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOperationalNum.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.labelOperationalNum.Location = new System.Drawing.Point(375, 165);
-            this.labelOperationalNum.Name = "labelOperationalNum";
-            this.labelOperationalNum.Size = new System.Drawing.Size(0, 16);
-            this.labelOperationalNum.TabIndex = 21;
-            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -380,6 +381,7 @@
             this.Name = "Calculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.MainPanel.ResumeLayout(false);
             this.MainPanel.PerformLayout();
             this.ResumeLayout(false);
